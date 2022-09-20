@@ -1,0 +1,17 @@
+FROM node:12-alpine
+
+ARG BACKEND_HOST
+ENV BACKEND_HOST=$BACKEND_HOST
+ARG ENV
+ARG PUBLISH_KEY
+ENV ENV=${ENV}
+ENV PUBLISH_KEY=${PUBLISH_KEY}
+ARG SUBSCRIBE_KEY
+ENV SUBSCRIBE_KEY=${SUBSCRIBE_KEY}
+
+RUN mkdir -p /usr/src/app
+COPY . /usr/src/app/
+WORKDIR /usr/src/app
+RUN yarn && yarn bootstrap
+
+CMD [ "yarn", "start" ]

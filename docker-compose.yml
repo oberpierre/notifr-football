@@ -1,0 +1,9 @@
+version: '2'
+services:
+  football-microservice:
+    image: "twaelti/football-microservice-releases:latest"
+    container_name: football-microservice-${ENV}
+    environment:  
+      - BACKEND_HOST=${BACKEND_HOST}
+      - PUBLISH_KEY=${PUBLISH_KEY}
+      - SUBSCRIBE_KEY=${SUBSCRIBE_KEY}

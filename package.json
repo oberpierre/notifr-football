@@ -1,0 +1,18 @@
+{
+  "name": "notifr-football",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Pierre Obermaier",
+  "license": "ISC",
+  "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build --stream",
+    "clean": "lerna clean --y",
+    "start": "lerna run start",
+    "test": "lerna run test --parallel --no-bail"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "FootballService": {
+    "PubNub": {
+      "channels": ["football"]
+    },
+    "RSS": {
+      "feeds": [
+        "http://www.scorespro.com/rss2/live-soccer.xml"
+      ],
+      "pollInterval": 15
+    }
+  }
+}
